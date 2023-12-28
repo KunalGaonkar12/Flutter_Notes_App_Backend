@@ -36,7 +36,7 @@ mongoose.connect(mongoDbPAth).then(function(){
 // Set Home route 
 app.get("/",function(req,res){
 
-    const response= {messgae:"Api Working!"}
+    const response= {statusCode:res.statusCode, messgae:"Api Working!"}
     res.json(response);
 });
 
@@ -56,6 +56,6 @@ console.log("Database Connect Succesfully...");
 const PORT=process.env.PORT || 5000
 
 //To run the app at port 5000
-app.listen(PORT,function(){
+app.listen(5000,function(){
     console.log("The server is running on Port: "+PORT)
 });

@@ -4,11 +4,8 @@ const router = express.Router();
 const Note=require("./../models/Notes")
 
 
-
-
-
 // Set note List route 
-router.get("/list", async function(req,res){
+router.post("/list", async function(req,res){
 
     //To find all data of type Note in the database
 var note= await Note.find({ userId:req.body.userId });
